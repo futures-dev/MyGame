@@ -5,7 +5,7 @@ import java.util.LinkedList;
 /**
  * Created by Computer on 20.09.2015.
  */
-public abstract class Entity implements Updatable {
+abstract class Entity implements Updatable {
     private int ID;
     protected static String className;
     private String name;
@@ -15,8 +15,6 @@ public abstract class Entity implements Updatable {
         this.ID = ID;
         this.name = name;
         this.level = level;
-        if (level!=null)
-            level.CheckIn(this);
     }
 
     public static String getClassName() {

@@ -5,7 +5,7 @@ import java.util.LinkedList;
 /**
  * Created by Computer on 20.09.2015.
  */
-public class Room extends RealEntity {
+class Room extends RealEntity {
     private String onEnterMsg;
     private String illegalAccessMsg;
     private LinkedList<Item> keysNeeded;
@@ -20,18 +20,6 @@ public class Room extends RealEntity {
         this.illegalAccessMsg = illegalAccessMsg;
     }
 
-    public String getOnEnterMsg() {
-        return onEnterMsg;
-    }
-
-    public LinkedList<Item> getKeysNeeded() {
-        return keysNeeded;
-    }
-
-    public LinkedList<Item> getItems() {
-        return items;
-    }
-
     @Override
     public void enter() throws IllegalAccessException,InterruptedException{
         if (keysNeeded!=null){
@@ -42,7 +30,7 @@ public class Room extends RealEntity {
                 for (Item item : level.getCharacter().getItemBag()){
                     if (item.getName()==key.getName())
                         found=true;
-                };
+                }
                 if (!found) {
                     ok = false;
                     t = key.getName();
@@ -58,7 +46,7 @@ public class Room extends RealEntity {
                 for (Item bagItem : level.getCharacter().getItemBag()){
                     if (bagItem.getName()==item.getName())
                         found=true;
-                };
+                }
                 if (!found)
                     level.getCharacter().getItemBag().add(item);
             }

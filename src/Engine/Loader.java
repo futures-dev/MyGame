@@ -12,7 +12,7 @@ public class Loader {
         System.out.print("Print your name, please: ");
         Scanner scanner = new Scanner(System.in);
         String name = scanner.nextLine();
-        System.out.println("Great, "+name+". Let's go for level 1.");
+        System.out.println("Great, "+name+". Let's go for the adventure.");
         character = new Entities.Character(name);
     }
 }

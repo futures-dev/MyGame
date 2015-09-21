@@ -5,6 +5,8 @@ package Entities;
  */
 public interface MoveableEntity {
     RealEntity getRealEntity();
-    void setOriginal(RealEntity original);
+
     RealEntity getOriginal();
+
+    void setOriginal(RealEntity original);
 }

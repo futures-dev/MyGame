@@ -7,12 +7,13 @@ import java.util.Scanner;
  */
 public class Loader {
     private Entities.Character character;
-    public Loader(){
+
+    public Loader() {
         System.out.println("Welcome to My Game!");
         System.out.print("Print your name, please: ");
         Scanner scanner = new Scanner(System.in);
         String name = scanner.nextLine();
-        System.out.println("Great, "+name+". Let's go for the adventure.");
+        System.out.println("Great, " + name + ". Let's go for the adventure.");
         character = new Entities.Character(name);
     }
 }

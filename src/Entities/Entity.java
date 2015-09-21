@@ -1,15 +1,13 @@
 package Entities;
 
-import java.util.LinkedList;
-
 /**
  * Created by Computer on 20.09.2015.
  */
 abstract class Entity implements Updatable {
-    private int ID;
     protected static String className;
-    private String name;
     protected Level level;
+    private int ID;
+    private String name;
 
     public Entity(int ID, String name, Level level) {
         this.ID = ID;
@@ -28,7 +26,9 @@ abstract class Entity implements Updatable {
     public String getName() {
         return name;
     }
-    public void Update(){}
+
+    public void Update() throws InterruptedException {
+    }
 
     public Level getLevel() {
         return level;

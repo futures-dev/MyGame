@@ -1,12 +1,11 @@
 package Entities;
 
 import java.util.LinkedList;
-import java.util.Scanner;
 
 /**
  * Created by Computer on 20.09.2015.
  */
-class TestRoom extends Room{
+class TestRoom extends Room {
     private String[] options;
     private LinkedList<Integer> correct;
     private String wrong;
@@ -21,7 +20,7 @@ class TestRoom extends Room{
     }
 
     @Override
-    public void enter() throws IllegalAccessException,InterruptedException{
+    public void enter() throws IllegalAccessException, InterruptedException {
         super.enter();
     }
 

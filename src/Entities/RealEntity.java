@@ -4,9 +4,9 @@ package Entities;
  * Created by Computer on 20.09.2015.
  */
 abstract class RealEntity extends Entity {
-    private char symbol;
     protected int row;
     protected int col;
+    private char symbol;
 
     public RealEntity(int ID, String name, Level level, char symbol, int Row, int Col) {
         super(ID, name, level);
@@ -20,5 +20,6 @@ abstract class RealEntity extends Entity {
         return symbol;
     }
 
-    public void enter() throws IllegalAccessException,InterruptedException{}
+    public void enter() throws IllegalAccessException, InterruptedException {
+    }
 }

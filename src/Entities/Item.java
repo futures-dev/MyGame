@@ -1,7 +1,5 @@
 package Entities;
 
-import java.util.LinkedList;
-
 /**
  * Created by Computer on 20.09.2015.
  */

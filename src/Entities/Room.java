@@ -21,15 +21,15 @@ class Room extends RealEntity {
     }
 
     @Override
-    public void enter() throws IllegalAccessException,InterruptedException{
-        if (keysNeeded!=null){
+    public void enter() throws IllegalAccessException, InterruptedException {
+        if (keysNeeded != null) {
             boolean ok = true;
             String t = "";
-            for (Item key : keysNeeded){
-                boolean found=false;
-                for (Item item : level.getCharacter().getItemBag()){
-                    if (item.getName()==key.getName())
-                        found=true;
+            for (Item key : keysNeeded) {
+                boolean found = false;
+                for (Item item : level.getCharacter().getItemBag()) {
+                    if (item.getName() == key.getName())
+                        found = true;
                 }
                 if (!found) {
                     ok = false;
@@ -40,12 +40,12 @@ class Room extends RealEntity {
             if (!ok)
                 throw new IllegalAccessException(illegalAccessMsg);
         }
-        if (items!=null){
+        if (items != null) {
             for (Item item : items) {
-                boolean found=false;
-                for (Item bagItem : level.getCharacter().getItemBag()){
-                    if (bagItem.getName()==item.getName())
-                        found=true;
+                boolean found = false;
+                for (Item bagItem : level.getCharacter().getItemBag()) {
+                    if (bagItem.getName() == item.getName())
+                        found = true;
                 }
                 if (!found)
                     level.getCharacter().getItemBag().add(item);

@@ -8,14 +8,16 @@ public class Map {
     private int colN = 12;
     private char[][] map;
 
-    public Map(){
+    public Map() {
         map = new char[rowN][];
-        for (int i = 0;i<rowN;i++)
+        for (int i = 0; i < rowN; i++)
             map[i] = new char[colN];
     }
-    public void Draw(){
+
+    public void Draw() {
+        System.out.println();
         String s = "";
-        for (int i = 0;i< getRowN();i++) {
+        for (int i = 0; i < getRowN(); i++) {
             System.out.println(String.valueOf(getMap()[i]));
         }
     }

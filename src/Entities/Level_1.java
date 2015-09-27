@@ -34,7 +34,7 @@ class Level_1 extends Level {
             for (int j = 0; j < ColN; j++)
                 entityMap[i][j] = new Room(getID(), "Room", this, 'O', i, j,
                         "You are in an old and wet cage with several doors.", null, null, "");
-        entityMap[8][5] = new Exit(getID(), "Exit", this, '@', 8, 5, "You've reached the exit from this level!", null, null, "");
+        entityMap[8][5] = new QuestExit(getID(), "Exit", this, '@', 8, 5, "You've reached the exit from this level!", null, null, "");
         entityMap[4][4] = new WalkingGirl_1(getID(), "TestRoom", this, '%', 4, 4, "A beautiful girl is standing by a wall.",
                 null, null, new String[]{"(1) Pass by.", "(2) Tell her the weather is great."},
                 new LinkedList<Integer>(Arrays.asList(1)), "She hates talks about weather and so killed you.", "");

@@ -15,6 +15,7 @@ public class Character extends RealEntity {
         level = new Level_2(this);
         level = new Level_3(this);
         level = new Level_4(this);
+        System.out.println("You've completed the game. Congratulations!");
     }
 
     protected int getHealth() {

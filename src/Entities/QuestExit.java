@@ -82,6 +82,7 @@ public class QuestExit extends Exit {
         int action = 0;
         boolean ok = true;
         do {
+            System.out.println(monologues[action]);
             switch (action) {
                 case -1:
                 case 9:
@@ -94,7 +95,6 @@ public class QuestExit extends Exit {
                     ok = false;
                     break;
                 default:
-                    System.out.println(monologues[action]);
                     System.out.println("(1) " + choices[action * 3]);
                     System.out.println("(2) " + choices[action * 3 + 1]);
                     System.out.println("(3) " + choices[action * 3 + 2]);

@@ -10,6 +10,7 @@ public class Loader {
 
     public Loader() {
         System.out.println("Welcome to My Game!");
+        System.out.println("For better experience maximize the console window, please.");
         System.out.print("Print your name, please: ");
         Scanner scanner = new Scanner(System.in);
         String name = scanner.nextLine();

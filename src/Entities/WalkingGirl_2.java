@@ -7,7 +7,7 @@ import java.util.LinkedList;
  */
 public class WalkingGirl_2 extends Room implements MoveableEntity {
 
-    protected RealEntity original;
+    private RealEntity original;
 
 
     private int count = 1;

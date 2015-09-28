@@ -16,7 +16,6 @@ public class Map {
 
     public void Draw() {
         System.out.println();
-        String s = "";
         for (int i = 0; i < getRowN(); i++) {
             System.out.println(String.valueOf(getMap()[i]));
         }
@@ -34,7 +33,4 @@ public class Map {
         return map;
     }
 
-    public void setMap(char[][] map) {
-        this.map = map;
-    }
 }

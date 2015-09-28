@@ -72,9 +72,9 @@ public class QuestExit extends Exit {
         };
     }
 
-    String[] choices;
-    String[] monologues;
-    int[] actions;
+    private String[] choices;
+    private String[] monologues;
+    private int[] actions;
 
     @Override
     public void enter() throws IllegalAccessException, InterruptedException {
@@ -105,7 +105,7 @@ public class QuestExit extends Exit {
                         try {
                             A = Integer.parseInt((input));
                         } catch (NumberFormatException e) {
-                            continue;
+                            A = 0;
                         }
                     } while (A < 1 || A > 3);
                     action = actions[action * 3 + A - 1];
@@ -115,7 +115,7 @@ public class QuestExit extends Exit {
         System.out.println("You've run away and reached the exit from the level!");
     }
 
-    static Random random = new Random();
+    private static Random random = new Random();
 
     private class Runner {
         private int stamina = 80 + random.nextInt(21);
@@ -209,15 +209,12 @@ public class QuestExit extends Exit {
             return destination;
         }
 
-        public int getMinSpeed() {
-            return minSpeed;
-        }
     }
 
     private class GirlRunner {
         private Runner runner;
         private int speed = random.nextInt(5) + 3;
-        private int maxSpeed = random.nextInt(5) + 21;
+        private int maxSpeed = random.nextInt(5) + 16;
         private int current = -40;
 
         public GirlRunner(Runner runner) {
@@ -306,14 +303,14 @@ public class QuestExit extends Exit {
                                 System.out.println("You are too exhausted, so you had to stop.");
                         case 4:
                             runner.incCurrent();
-                            runner.setSpeed(runner.getSpeed() / 4);
+                            runner.setSpeed(runner.getSpeed() / 3);
                             runner.repair();
                             break;
                         default:
                             bad = true;
                     }
                 } catch (NumberFormatException e) {
-                    continue;
+                    bad = true;
                 }
             } while (bad);
             girl.incCurrent();

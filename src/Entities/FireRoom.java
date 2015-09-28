@@ -14,10 +14,6 @@ class FireRoom extends Room {
         this.dmg = dmg;
     }
 
-    public int getDmg() {
-        return dmg;
-    }
-
     @Override
     public void enter() throws IllegalAccessException, InterruptedException {
         super.enter();

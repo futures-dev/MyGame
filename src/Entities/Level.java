@@ -7,15 +7,15 @@ import java.util.Scanner;
  * Created by Computer on 20.09.2015.
  */
 abstract class Level implements Updater {
-    protected RealEntity[][] entityMap;
-    protected Engine.Map map;
-    protected Character character;
-    protected LinkedList<Updatable> updatables;
-    protected int currentID;
-    protected int RowN;
-    protected int ColN;
+    RealEntity[][] entityMap;
+    Engine.Map map;
+    Character character;
+    LinkedList<Updatable> updatables;
+    private int currentID;
+    int RowN;
+    int ColN;
 
-    public Level(Character character) {
+    Level(Character character) {
         currentID = 0;
         map = new Engine.Map();
         this.character = character;
@@ -36,12 +36,12 @@ abstract class Level implements Updater {
         return character;
     }
 
-    protected int getID() {
+    int getID() {
         currentID += 1;
         return currentID;
     }
 
-    protected void Update() {
+    void Update() {
         for (int i = 0; i < RowN; i++)
             for (int j = 0; j < ColN; j++)
                 map.getMap()[i][j] = entityMap[i][j].getSymbol();
@@ -66,7 +66,7 @@ abstract class Level implements Updater {
 
     protected abstract void load() throws ExceptionInInitializerError;
 
-    protected void loop() {
+    private void loop() {
         try {
             entityMap[character.row][character.col].enter();
             Update();

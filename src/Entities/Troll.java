@@ -7,7 +7,7 @@ import java.util.LinkedList;
  */
 public class Troll extends Room implements MoveableEntity {
 
-    protected RealEntity original;
+    private RealEntity original;
     private int dmg;
     private int count = 2;
 

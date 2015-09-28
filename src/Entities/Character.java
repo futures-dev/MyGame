@@ -18,22 +18,22 @@ public class Character extends RealEntity {
         System.out.println("You've completed the game. Congratulations!");
     }
 
-    protected int getHealth() {
+    int getHealth() {
         return health;
     }
 
-    protected void setHealth(int health) throws InterruptedException {
+    void setHealth(int health) throws InterruptedException {
         if (health <= 0)
             throw new InterruptedException("You are dead :( Try again!");
         else
             this.health = health;
     }
 
-    protected LinkedList<Item> getItemBag() {
+    LinkedList<Item> getItemBag() {
         return itemBag;
     }
 
-    protected void setItemBag(LinkedList<Item> itemBag) {
+    void setItemBag(LinkedList<Item> itemBag) {
         this.itemBag = itemBag;
     }
 }

@@ -8,7 +8,7 @@ import java.util.Scanner;
  */
 class WalkingGirl_1 extends TestRoom implements MoveableEntity {
 
-    protected RealEntity original;
+    private RealEntity original;
     private int count = 1;
 
     public WalkingGirl_1(int ID, String name, Level level, char symbol, int posRow, int posCol, String onEnterMsg,

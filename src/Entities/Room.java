@@ -1,6 +1,7 @@
 package Entities;
 
 import java.util.LinkedList;
+import java.util.Objects;
 
 /**
  * Created by Computer on 20.09.2015.
@@ -24,16 +25,16 @@ class Room extends RealEntity {
     public void enter() throws IllegalAccessException, InterruptedException {
         if (keysNeeded != null) {
             boolean ok = true;
-            String t = "";
+            //String t = "";
             for (Item key : keysNeeded) {
                 boolean found = false;
                 for (Item item : level.getCharacter().getItemBag()) {
-                    if (item.getName() == key.getName())
+                    if (Objects.equals(item.getName(), key.getName()))
                         found = true;
                 }
                 if (!found) {
                     ok = false;
-                    t = key.getName();
+                    //t = key.getName();
                     break;
                 }
             }
@@ -44,7 +45,7 @@ class Room extends RealEntity {
             for (Item item : items) {
                 boolean found = false;
                 for (Item bagItem : level.getCharacter().getItemBag()) {
-                    if (bagItem.getName() == item.getName())
+                    if (Objects.equals(bagItem.getName(), item.getName()))
                         found = true;
                 }
                 if (!found)

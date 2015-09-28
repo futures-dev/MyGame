@@ -10,9 +10,9 @@ class TestRoom extends Room {
     private LinkedList<Integer> correct;
     private String wrong;
 
-    public TestRoom(int ID, String name, Level level, char symbol, int posRow, int posCol, String onEnterMsg,
-                    LinkedList<Item> keysNeeded, LinkedList<Item> items, String[] options,
-                    LinkedList<Integer> correct, String wrong, String illegalAccessString) {
+    TestRoom(int ID, String name, Level level, char symbol, int posRow, int posCol, String onEnterMsg,
+             LinkedList<Item> keysNeeded, LinkedList<Item> items, String[] options,
+             LinkedList<Integer> correct, String wrong, String illegalAccessString) {
         super(ID, name, level, symbol, posRow, posCol, onEnterMsg, keysNeeded, items, illegalAccessString);
         this.options = options;
         this.correct = correct;
@@ -24,15 +24,15 @@ class TestRoom extends Room {
         super.enter();
     }
 
-    public String[] getOptions() {
+    String[] getOptions() {
         return options;
     }
 
-    public LinkedList<Integer> getCorrect() {
+    LinkedList<Integer> getCorrect() {
         return correct;
     }
 
-    public String getWrong() {
+    String getWrong() {
         return wrong;
     }
 }
